@@ -12,9 +12,7 @@ tree = {
 
 
 def bfs(tree, node):
-    queue = []
-
-    queue.append(node)
+    queue = [node]
 
     while queue:
         s = queue.pop(0)
@@ -22,7 +20,7 @@ def bfs(tree, node):
 
         for n in tree[s]:
             queue.append(n)
-        # stack.extend(reversed(tree[s])) -- more python idiomatic instead the for loop
+        # stack.extend(tree[s]) -- more python idiomatic instead the for loop
 
 
 def main():
