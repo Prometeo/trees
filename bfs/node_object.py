@@ -35,8 +35,22 @@ def bfs(root: TreeNode):
             queue.append(n)
 
 
+def dfs(root: TreeNode):
+    stack = [root]
+
+    while stack:
+        s = stack.pop()
+        print(s.val, end=" ")
+
+        for n in reversed(s.children):
+            stack.append(n)
+
+
 def main():
     bfs(root)
+    print()
+
+    dfs(root)
     print()
 
 
